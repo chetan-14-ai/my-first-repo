@@ -11,5 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build step
-        run: echo "building it"
+        run: echo "${{ vars.mv }}"
 
