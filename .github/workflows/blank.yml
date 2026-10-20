@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build step
-        run: echo "${{ vars.mv }}"
+        run: echo "${{ secrets.PWD }}"
 
