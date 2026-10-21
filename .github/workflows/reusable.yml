@@ -2,9 +2,10 @@ name: reuable
 on: 
   workflow_call:
       inputs:
-        description: enter the name
-        required: true
-        type: string
+        name:
+          description: enter the name
+          required: true
+          type: string
 jobs:
   greeting:
     runs-on: ubuntu-latest
