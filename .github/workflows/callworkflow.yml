@@ -4,4 +4,4 @@ jobs:
   greet:
     uses: ./.github/workflows/reusable.yml
     with:
-        name: 'chetan'
+        name: 'chetan chavva'
