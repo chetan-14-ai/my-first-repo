@@ -3,18 +3,14 @@ name: output Demo
 on: push
 jobs:
   j1:
-    outputs:
-      version: ${{ steps.s1.outputs.version }}
     runs-on: ubuntu-latest
     steps:
       - name: step 1
-        id: s1
         if:  github.ref == 'refs/heads/main'
-        run: echo "version=1.0.04" >> $GITHUB_OUTPUT
+        run: echo "version=1.0.04" 
   j2:
-    needs:  j1
     runs-on: ubuntu-latest
     steps:
       - name: the deploy
-        run: echo "the version is ${{ needs.j1.outputs.version }}"
+        run: echo "the version is"
         
