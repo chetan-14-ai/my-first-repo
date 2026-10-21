@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: step 1
-        if: github.ref_name == 'master'
+        if: github.ref_name == 'master' || github.ref_name == 'main'
         run: echo "version=1.0.04" 
   j2:
     runs-on: ubuntu-latest
