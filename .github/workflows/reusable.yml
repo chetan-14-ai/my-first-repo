@@ -1,0 +1,14 @@
+name: reuable
+on: 
+  workflow_call:
+      inputs:
+        description: enter the name
+        required: true
+        type: string
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: re step
+        run: echo "u are in reusable worflow"
+        
