@@ -10,5 +10,5 @@ jobs:
   inputdemo:
     runs-on:  ubuntu-latest
     steps:
-      -  name:  input step
+      -  name:  input step 1
          run: echo "deploying the application in ${{ inputs.environment }}"
