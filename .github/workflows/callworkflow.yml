@@ -3,3 +3,5 @@ on: push
 jobs:
   greet:
     uses: ./.github/workflows/reusable.yml
+    with:
+        name: 'chetan'
