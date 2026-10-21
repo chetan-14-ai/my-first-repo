@@ -9,6 +9,7 @@ jobs:
     steps:
       - name: step 1
         id: s1
+        if:  github.ref == 'refs/heads/main'
         run: echo "version=1.0.04" >> $GITHUB_OUTPUT
   j2:
     needs:  j1
