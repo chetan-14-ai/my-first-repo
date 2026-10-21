@@ -1,14 +1,22 @@
-name: input demo
+name: Input Demo
+
 on:
   workflow_dispatch:
     inputs:
       environment:
-        description: choose the environment
+        description: "Select environment"
         required: true
-        default: dev
+        type: choice
+        options:
+          - dev
+          - test
+          - stage
+          - prod
+
 jobs:
-  inputdemo:
-    runs-on:  ubuntu-latest
+  deploy:
+    runs-on: ubuntu-latest
+
     steps:
-      -  name:  input step 1
-         run: echo "deploying the application in ${{ inputs.environment }}"
+      - name: Display Environment
+        run: echo "Deploying application to ${{ github.event.inputs.environment }}"
