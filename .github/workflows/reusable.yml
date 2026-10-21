@@ -11,5 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: re step
-        run: echo "u are in reusable worflow"
+        run: echo " ${{ inputs.name }} u are in reusable worflow"
         
