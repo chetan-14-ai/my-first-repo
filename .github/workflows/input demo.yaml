@@ -21,4 +21,4 @@ jobs:
 
     steps:
       - name: Display Environment
-        run: echo "Deploying application to ${{ github.event.inputs.environment }}"
+        run: echo "Deploying application to ${{ inputs.environment }} ${{ github.actor }}"
